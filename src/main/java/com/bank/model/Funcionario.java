@@ -1,4 +1,4 @@
-package com.bank.study;
+package com.bank.model;
 
 public class Funcionario {
 
