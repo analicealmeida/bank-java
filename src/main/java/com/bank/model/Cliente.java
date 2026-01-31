@@ -7,6 +7,12 @@ public class Cliente extends Pessoa {
 
     private int score;
 
+    public Cliente() {
+    }
+    public Cliente(String nome, String email) {
+        super(nome, email);
+    }
+
 
     //construtor default, get e set
     public int getScore() {
