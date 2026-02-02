@@ -2,7 +2,7 @@ package com.bank.model;
 
 import java.math.BigDecimal;
 
-public class Conta {
+public abstract class Conta {
     //declaração
     private String numeroAgencia;
     private String numeroConta;
@@ -11,7 +11,7 @@ public class Conta {
 
     //construtor
     //pediu construtor com parametros
-    public Conta(String agencia, String numConta, String cpf, BigDecimal saldo) {
+    public Conta(String numeroAgencia, String numeroConta, String cpfTitular, BigDecimal saldo) {
         this.numeroAgencia = numeroAgencia;
         this.numeroConta = numeroConta;
         this.cpfTitular = cpfTitular;

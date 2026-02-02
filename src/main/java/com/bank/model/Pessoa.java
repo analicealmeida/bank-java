@@ -2,7 +2,7 @@ package com.bank.model;
 
 import java.util.Date;
 
-public class Pessoa {
+public abstract class Pessoa {
 
     //declaração
     private String nome;

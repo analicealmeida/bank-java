@@ -86,7 +86,7 @@ public class Teste {
                     }
 
                 }
-                if (!encontrado) { //parei aqui
+                if (!encontrado) {
                     System.out.println("Produto não encontrado.");
                 }
 

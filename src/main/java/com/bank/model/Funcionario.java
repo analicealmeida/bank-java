@@ -9,7 +9,7 @@ public class Funcionario extends Pessoa {
     //declaração
 
     private double salario;
-    public String cargo;
+    public Cargo cargo;
     
 
     //construtor default
@@ -22,7 +22,7 @@ public class Funcionario extends Pessoa {
         return salario;
     }
 
-    public String cargo() {
+    public Cargo cargo() {
         return cargo;
     }
 
@@ -30,7 +30,7 @@ public class Funcionario extends Pessoa {
         this.salario = salario;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 
