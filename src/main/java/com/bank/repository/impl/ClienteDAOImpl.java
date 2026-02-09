@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteDAOImpl implements ClienteDAO {
-
+    //quero trabalhar com a estrutura de dados da classe Cliente
     List<Cliente> dataBase = new ArrayList<>();
 
     @Override

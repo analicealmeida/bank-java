@@ -16,6 +16,9 @@ public class Funcionario extends Pessoa {
     public Funcionario() {
 
     }
+    public Funcionario(String cpf, String nome, String email){
+        super(cpf,nome,email);
+    }
 
     //set e get
     public double getSalario() {

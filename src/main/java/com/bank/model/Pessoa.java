@@ -17,6 +17,12 @@ public abstract class Pessoa {
     }
     public Pessoa (){
      }
+
+     public Pessoa(String cpf, String nome, String email){
+        this.cpf=cpf;
+        this.nome=nome;
+        this.email=email;
+     }
     //set e get
     public String getNome() {
         return nome;
