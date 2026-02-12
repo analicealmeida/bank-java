@@ -15,27 +15,30 @@ public abstract class Pessoa {
         this.nome = nome;
         this.email = email;
     }
-    public Pessoa (){
-     }
 
-     public Pessoa(String cpf, String nome, String email){
-        this.cpf=cpf;
-        this.nome=nome;
-        this.email=email;
-     }
+    public Pessoa() {
+    }
+
+    public Pessoa(String cpf, String nome, String email) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.email = email;
+    }
+
     //set e get
     public String getNome() {
         return nome;
     }
 
-    public String getEmail() {
+    public String getEmail(String dadosCliente) {
         return email;
     }
 
     public String getCpf() {
         return cpf;
     }
-    public Date getDataNascimento(){
+
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
@@ -51,9 +54,18 @@ public abstract class Pessoa {
         this.cpf = cpf;
     }
 
-    public void setDataNascimento(Date dataNascimento){
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+
+    //métodos = ação
+    @Override
+    public String toString() {
+        return "Nome: " + nome +
+                " | Email:  " + email +
+                " | CPF: " + cpf +
+                " | Data Nascimento:" + dataNascimento;
     }
 }
 
-//métodos = ação

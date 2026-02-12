@@ -5,7 +5,7 @@ import com.bank.repository.FuncionarioDAO;
 
 public class FuncionarioDAOImpl implements FuncionarioDAO {
 
-    private Funcionario[] funcionarios = new Funcionario[100];
+    private static Funcionario[] funcionarios = new Funcionario[100];
     private int contador = 0;
     @Override
     public boolean create (Funcionario funcionario) {

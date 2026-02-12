@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ClienteDAOImpl implements ClienteDAO {
     //quero trabalhar com a estrutura de dados da classe Cliente
-    List<Cliente> dataBase = new ArrayList<>();
+    private static List<Cliente> dataBase = new ArrayList<>();
 
     @Override
     public boolean create(Cliente cliente) {
@@ -62,7 +62,34 @@ public class ClienteDAOImpl implements ClienteDAO {
     }
 
     @Override
-    public List<Cliente> getAll() {
-        return this.dataBase;
+    public boolean validacao (String cpf) {
+        //variavel para validar o indice
+        int clienteEncontrado = -1;
+        //percorrendo a lista para encontrar o cpf, encontrando guardamos o cpf na variavel clienteEncontrado
+        for (int i = 0; i < dataBase.size(); i++) {
+            if (dataBase.get(i).getCpf().equalsIgnoreCase(cpf)) {
+                clienteEncontrado = i;
+                dataBase.get(clienteEncontrado);
+                return true;
+
+            }
+        }
+        //se nao encontrado retornamos falso
+        if (clienteEncontrado == -1) {
+            return false;
+        }
+        return false;
+    }
+
+        @Override
+        public List<Cliente> getAll() {
+            return this.dataBase;
+        }
+
+          @Override
+    public String toString() {
+        return super.toString();
     }
 }
+
+

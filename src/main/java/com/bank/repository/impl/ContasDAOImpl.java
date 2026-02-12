@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ContasDAOImpl implements ContasDAO {
 
-    private Map<String, Conta> contas = new HashMap<>();
+    private static Map<String, Conta> contas = new HashMap<>();
 
 
     @Override

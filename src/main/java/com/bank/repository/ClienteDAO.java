@@ -10,5 +10,6 @@ public interface ClienteDAO {
     Cliente read(String cpf);
     boolean update(String cpf, Cliente cliente);
     boolean delete(String cpf);
+    public boolean validacao (String cpf);
     List<Cliente> getAll();
 }

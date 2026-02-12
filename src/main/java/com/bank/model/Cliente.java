@@ -6,9 +6,11 @@ public class Cliente extends Pessoa {
     //declaração
     private int score;
 
+
     //sobrecarga de construtores, mesmo nome, parametros diferentes
     public Cliente() {
     }
+
     public Cliente(String nome, String email) {
         //inicializando objetos da classe pai
         super(nome, email);
@@ -27,3 +29,4 @@ public class Cliente extends Pessoa {
     //ação
 
 }
+
