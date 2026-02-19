@@ -10,5 +10,6 @@ public interface ClienteService {
     Cliente read(String cpf);
     boolean update(String cpf, Cliente cliente);
     boolean delete(String cpf);
+    List<Cliente> scoreMaiorQue500();
     List<Cliente> getAll();
 }

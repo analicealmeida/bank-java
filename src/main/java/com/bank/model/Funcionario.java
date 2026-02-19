@@ -38,9 +38,9 @@ public class Funcionario extends Pessoa {
     }
 
     //metodo = ação
-    public double calcularSalarioAnual() {
-        return this.salario * 12;
-    }
+    //public double calcularSalarioAnual() {
+        //return this.salario * 12;
+    //}
 
 
 

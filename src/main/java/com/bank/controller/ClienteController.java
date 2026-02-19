@@ -14,6 +14,24 @@ public class ClienteController {
         this.service = new ClienteServiceImpl();
     }
 
+    public List<Cliente> scoreMaiorQue500(){
+       return service.scoreMaiorQue500();
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     public boolean create(Cliente cliente){
         return this.service.create(cliente);
     }
@@ -30,4 +48,6 @@ public class ClienteController {
     public List<Cliente> getAll(){
         return this.service.getAll();
     }
+
+
 }

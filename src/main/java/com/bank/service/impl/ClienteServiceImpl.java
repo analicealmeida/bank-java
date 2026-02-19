@@ -46,7 +46,15 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
+    public List<Cliente> scoreMaiorQue500() {
+        return dao.scoreMaiorQue500();
+    }
+
+    @Override
     public List<Cliente> getAll() {
         return dao.getAll();
     }
 }
+
+
+
