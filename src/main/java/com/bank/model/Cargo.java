@@ -1,7 +1,7 @@
 package com.bank.model;
 
 public enum Cargo {
-    DIRETOR(50000,100000),ATENDENTE(1800,3000),GERENTE(10000,15000);
+    DIRETOR(50000,100000),ATENDENTE(1800,3000),GERENTE(10000,15000),ESTAGIARIO(600, 1800);
     private double salarioMaximo;
     private double salarioMinimo;
 

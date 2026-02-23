@@ -1,7 +1,11 @@
 package com.bank.repository.impl;
 
+import com.bank.model.Cargo;
 import com.bank.model.Funcionario;
 import com.bank.repository.FuncionarioDAO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FuncionarioDAOImpl implements FuncionarioDAO {
 
@@ -68,4 +72,20 @@ public class FuncionarioDAOImpl implements FuncionarioDAO {
         return true;
     }
 
+
+    @Override
+    public List<Funcionario> getAll() {
+        return List.of(this.funcionarios);
+    }
+
+    @Override
+    public List<Funcionario> numeroCargoIntern() {
+        List<Funcionario> funcionariosEstagiarios = new ArrayList<>();
+        for (Funcionario funcionario : funcionarios){
+            if(funcionario.cargo()== Cargo.ESTAGIARIO){
+                funcionariosEstagiarios.add(funcionario);
+            }
+        }
+        return funcionariosEstagiarios;
+    }
 }

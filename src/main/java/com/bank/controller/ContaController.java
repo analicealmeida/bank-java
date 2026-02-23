@@ -10,7 +10,7 @@ import com.bank.service.impl.ContaServiceImpl;
 public class ContaController {
 
     private ContaService service;
-
+/*
     public ContaController(){
         this.service = new ContaServiceImpl();
     }
@@ -27,5 +27,5 @@ public class ContaController {
     public boolean delete(String cpf){
         return this.service.delete(cpf);
     }
-
+*/
 }

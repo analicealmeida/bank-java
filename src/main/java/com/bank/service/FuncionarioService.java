@@ -13,5 +13,6 @@ public interface FuncionarioService {
     boolean update(String cpf, Funcionario funcionario);
     boolean delete(String cpf);
     List<Funcionario> getAll();
+    List<Funcionario> numeroCargoIntern();
 
 }

@@ -1,10 +1,12 @@
 package com.bank.service.impl;
 
 import com.bank.model.Cliente;
+import com.bank.model.Funcionario;
 import com.bank.repository.ClienteDAO;
 import com.bank.repository.impl.ClienteDAOImpl;
 import com.bank.service.ClienteService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteServiceImpl implements ClienteService {
@@ -47,7 +49,14 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public List<Cliente> scoreMaiorQue500() {
-        return dao.scoreMaiorQue500();
+        List<Cliente> clientes = getAll();
+        List<Cliente> clientesResultado = new ArrayList<>();
+        for (Cliente cliente : clientes){
+            if (cliente.getScore() > 500){
+                clientesResultado.add(cliente);
+            }
+        }
+        return clientesResultado;
     }
 
     @Override

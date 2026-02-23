@@ -33,5 +33,10 @@ public class FuncionarioController {
     public List<Funcionario> getAll(){
         return this.funcionarioService.getAll();
     }
+
+    public List<Funcionario> numeroCargoIntern() {
+        return this.funcionarioService.numeroCargoIntern();
+
+    }
 }
-}
+

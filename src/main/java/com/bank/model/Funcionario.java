@@ -37,6 +37,7 @@ public class Funcionario extends Pessoa {
         this.cargo = cargo;
     }
 
+
     //metodo = ação
     //public double calcularSalarioAnual() {
         //return this.salario * 12;
