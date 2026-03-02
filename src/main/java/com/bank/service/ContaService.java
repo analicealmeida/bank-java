@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface ContaService {
     boolean create(Conta conta);
-    Conta read(String cpf);
-    boolean update(String cpf, Conta conta);
-    boolean delete(String cpf);
+    Conta read(String numeroConta);
+    boolean update(String numeroConta, Conta conta);
+    boolean delete(String numeroConta);
     List<Conta> getAll();
 }

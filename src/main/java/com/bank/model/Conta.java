@@ -24,7 +24,7 @@ public abstract class Conta {
 
 
     //encapsulamento
-    public String getNumeroagencia() {
+    public String getNumeroagencia(int comandoUsuario) {
         return numeroAgencia;
     }
 
@@ -36,7 +36,7 @@ public abstract class Conta {
         return cpfTitular;
     }
 
-    public BigDecimal getSaldo() {
+    public BigDecimal getSaldo(int comandoUsuario) {
         return saldo;
     }
 

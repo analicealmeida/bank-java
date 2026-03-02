@@ -20,10 +20,14 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public boolean create(Cliente cliente) {
         String cpf = cliente.getCpf();
-        if(cpf != null && cpf.length() == 11 && this.read(cpf) == null){
-            return dao.create(cliente);
+        if(cpf == null){
+            throw new IllegalArgumentException("Cpf não pode ser nulo.");
+        } if (cpf.length() != 11){
+            throw new IllegalArgumentException("CPF invalido.");
+        } if (this.read(cpf) != null){
+            throw new IllegalStateException("Cliente ja cadastrado.");
         }
-        return false;
+        return dao.create(cliente);
     }
 
     @Override
@@ -34,7 +38,7 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public boolean update(String cpf, Cliente cliente) {
         if(cpf ==null || cpf.length() != 11 || cliente == null || cliente.getCpf() == null){
-            return false;
+            throw new IllegalArgumentException("CPF invalido.");
         }
         return dao.update(cpf, cliente);
     }
@@ -42,7 +46,7 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public boolean delete(String cpf) {
         if(cpf == null || cpf.length() != 11){
-            return false;
+            throw new IllegalArgumentException("CPF inválido.");
         }
         return dao.delete(cpf);
     }

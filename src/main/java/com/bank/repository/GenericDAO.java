@@ -1,9 +1,11 @@
 package com.bank.repository;
 
+import com.bank.model.Funcionario;
+
 public interface GenericDAO<V, K> {
 
     boolean create(V v);
     V read(K k);
-    boolean update(K k, V v);
+    boolean update(String k, V v);
     boolean delete(K k);
 }

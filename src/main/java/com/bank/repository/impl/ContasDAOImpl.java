@@ -1,9 +1,12 @@
 package com.bank.repository.impl;
 
 import com.bank.model.Conta;
+import com.bank.model.Funcionario;
 import com.bank.repository.ContasDAO;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ContasDAOImpl implements ContasDAO {
@@ -32,12 +35,23 @@ public class ContasDAOImpl implements ContasDAO {
         }
         return false;
     }
+
     @Override
     public boolean delete(String numeroConta) {
-        if(contas.containsKey(numeroConta)) {
+        if (contas.containsKey(numeroConta)) {
             contas.remove(numeroConta);
             return true;
         }
         return false;
+    }
+
+
+    @Override
+    public List<Conta> getAll() {
+        List<Conta> contaNovo = new ArrayList<>();
+
+        return contaNovo = (List<Conta>) contas.values(); //ESTUDAR CAST ***********//FOR COM HASHMAP
+
+
     }
 }

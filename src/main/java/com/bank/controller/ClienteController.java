@@ -16,11 +16,7 @@ public class ClienteController {
 
     public List<Cliente> scoreMaiorQue500() {
         return service.scoreMaiorQue500();
-
-
     }
-
-
     public boolean create(Cliente cliente) {
         return this.service.create(cliente);
     }

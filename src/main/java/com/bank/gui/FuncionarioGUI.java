@@ -22,9 +22,9 @@ public class FuncionarioGUI { //ESTUDAR
 
         dao.delete("789");
 
-        dao.update(func.getCpf(), new Funcionario("987", "Gabriela", "gabriela@gmail.com"));
+        //dao.update(func.getCpf(), new Funcionario("987", "Gabriela", "gabriela@gmail.com"));
 
-        System.out.println(dao.read("987").getNome());
+        //System.out.println(dao.read("987").getNome());
 
 
 

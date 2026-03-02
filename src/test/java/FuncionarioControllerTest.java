@@ -27,7 +27,7 @@ public class FuncionarioControllerTest {
         funcionarioController.create(func2);
         funcionarioController.create(func3);
 
-        List<Funcionario> funcionario = funcionarioController.numeroCargoIntern();
+        List<Funcionario> funcionario = funcionarioController.numeroCargoIntern(); //TODO
 
         assertTrue(funcionario.size() < 15);
 
