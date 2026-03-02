@@ -41,7 +41,7 @@ public class MenuGUI {
             if (comandoUsuario == 1) {
                 System.out.println("Digite 1 para cadastrar um novo cliente ");
                 System.out.println("Digite 2 para listar um cliente");
-                System.out.println("Digite 3 para atualizar uma conta de cliente"); //TODO
+                System.out.println("Digite 3 para atualizar uma conta de cliente"); //novo
                 System.out.println("Digite 4 para excluir um cliente");
                 comandoUsuario = sc.nextInt();
 
@@ -153,7 +153,7 @@ public class MenuGUI {
                 }
 
             }
-            if (comandoUsuario == 3) {
+            if (comandoUsuario == 3) { //novo
                 System.out.println("Digite 1 para cadastrar uma nova conta ");
                 System.out.println("Digite 2 para listar uma conta");
                 System.out.println("Digite 3 para atualizar uma conta de cliente");
